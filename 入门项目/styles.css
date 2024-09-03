@@ -1,0 +1,552 @@
+html, body {
+    height: 100%;
+    margin: 0; /* 移除默认的边距 */
+    /*padding: 0; !* 移除默认的填充 *!*/
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+    /* 你可以考虑添加一些其他的背景属性，比如 background-attachment: fixed; 来固定背景 */
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* 使得子元素垂直排列 */
+    background-image: url('./png/main.jpg'); /* 替换为你的图片路径 */
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed; /* 背景图片固定 */
+    min-height: 97vh; /* 至少为视口高度 */
+}
+
+#menu {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: flex-end; /* 垂直居下 */
+    margin-top: 640px; /* 使用 margin-top: auto 将内容推到底部 */
+    padding-bottom: 20px; /* 根据需要调整底部内边距 */
+    gap: 20px; /* Flexbox 的 gap 属性用于设置子元素之间的间隔，但注意旧版浏览器可能不支持 */
+    /* 如果 gap 属性不被支持，可以使用 margin-right 在每个子元素上（除了最后一个） */
+    margin-bottom: 15px;
+}
+
+#menu div:hover {
+    cursor: pointer;
+}
+
+.parallelogram {
+    display: inline-block;
+    color: #ffffff; /* 文字颜色 */
+    font-size: 12px; /* 文字大小 */
+    padding: 12px 35px; /* 注意：这里的padding会受到倾斜的影响，可能需要调整 */
+    background-color: rgba(0, 0, 0, 0.3); /* 半透明灰色背景 */
+    border: 2px solid rgb(76, 129, 211); /* 蓝色边框 */
+    position: relative; /* 为内部元素设置绝对定位 */
+    overflow: hidden; /* 确保倾斜后不会显示多余的内容 */
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.parallelogram.active {
+    color: rgb(94, 235, 255); /* 字体颜色变为蓝色 */
+    background-color: rgba(0, 0, 0, 0.5); /* 背景色加深 */
+}
+
+.inner-content {
+    position: absolute; /* 绝对定位，相对于.parallelogram */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex; /* 使用Flexbox进行居中 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+}
+
+.left {
+    float: left;
+}
+
+.leftTop {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding-left: 10px;
+    width: 20%;
+    height: 20%;
+    line-height: 40px;
+    background-color: rgba(255, 248, 248, 0);
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.text {
+    color: rgb(81, 91, 231);
+    font-size: 16px; /* 文本大小 */
+}
+
+.title {
+    display: flex; /* 启用Flexbox布局 */
+    align-items: center; /* 垂直居中子元素 */
+    gap: 10px; /* 设置子元素之间的间距 */
+}
+
+.title img {
+    height: 20px; /* 假设你希望图片有一个固定的高度 */
+    width: auto; /* 保持图片的原始宽高比 */
+}
+
+.leftTopMain {
+    display: flex; /* 启用Flexbox布局以并排显示子元素 */
+    justify-content: space-around; /* 或者使用其他值来控制子元素之间的间距，如space-between, flex-start等 */
+}
+
+.leftTopMain div {
+    /* 这里可以为.leftTopMain下的每个div添加样式 */
+    /* 比如设置宽度、高度、背景色等 */
+    /*flex-grow: 1; !* 允许子元素根据可用空间增长 *!*/
+    text-align: center; /* 如果需要，可以居中文本 */
+    /* 其他样式... */
+}
+
+.leftTopMain img {
+    height: 50px; /* 假设你希望图片有一个固定的高度 */
+    width: auto; /* 保持图片的原始宽高比 */
+    margin-bottom: -12px;
+}
+
+.textBorder {
+    font-size: 10px;
+    width: 75px;
+    height: 20px;
+    line-height: 20px;
+    /* 使用线性渐变作为背景 */
+    background-image: linear-gradient(to right, rgb(21, 123, 165), rgb(77, 76, 157));
+    color: white;
+    /* 可选：设置文本居中显示 */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textContent {
+    color: rgb(157, 206, 254);
+    font-size: 12px;
+    margin-top: -6px;
+
+}
+
+.leftBottom {
+    position: absolute;
+    top: 25%;
+    left: 20px;
+    padding-left: 10px;
+    width: 20%;
+    height: 65%;
+    line-height: 40px;
+    background-color: rgba(255, 248, 248, 0);
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.leftBottomMain {
+    display: flex; /* 启用Flexbox布局以并排显示子元素 */
+    justify-content: space-between; /* 或者使用其他值来控制子元素之间的间距，如space-between, flex-start等 */
+}
+
+.leftBottomMain div {
+    /* 这里可以为.leftTopMain下的每个div添加样式 */
+    /* 比如设置宽度、高度、背景色等 */
+    /*flex-grow: 1; !* 允许子元素根据可用空间增长 *!*/
+    text-align: center; /* 如果需要，可以居中文本 */
+    /* 其他样式... */
+}
+
+.leftBottomMainItem {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    color: rgb(189, 189, 189);
+    font-size: 12px;
+}
+
+.rectangle {
+    background-color: rgb(17, 70, 124);
+    width: 13px;
+    height: 40px;
+    margin-bottom: 5px;
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.monitoringName {
+    grid-area: 1 / 2 / 2 / 6;
+    height: 20px;
+    line-height: 20px;
+    width: 270px;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    padding-left: 20px;
+}
+
+.monitoringInfo {
+    float: right;
+    margin-right: 20px;
+    color: white;
+    font-size: 10px;
+    width: 40px;
+    height: 15px;
+    text-align: center;
+    line-height: 17px;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+
+.monitoringTime {
+    grid-area: 2 / 2 / 3 / 6;
+    height: 20px;
+    line-height: 20px;
+    width: 270px;
+    padding-left: 20px;
+
+}
+
+.right {
+    float: right;
+}
+
+.rightTop {
+    position: absolute;
+    top: 20px;
+    line-height: 40px;
+    right: 20px;
+    padding-left: 10px;
+    width: 20%;
+    height: 15%;
+    background-color: rgba(255, 248, 248, 0);
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.rightTopMain {
+    display: flex; /* 启用Flexbox布局以并排显示子元素 */
+    justify-content: space-around; /* 或者使用其他值来控制子元素之间的间距，如space-between, flex-start等 */
+}
+
+.rightTopMain div {
+    text-align: center;
+    height: 63px;
+    line-height: 63px;
+}
+
+.rightTopMain img {
+    height: 50px; /* 假设你希望图片有一个固定的高度 */
+    width: auto; /* 保持图片的原始宽高比 */
+    margin-bottom: -12px;
+}
+
+.rightMedium {
+    position: absolute;
+    top: 20%;
+    line-height: 40px;
+    right: 20px;
+    padding-left: 10px;
+    width: 20%;
+    height: 25%;
+    background-color: rgba(255, 248, 248, 0);
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.rightMainSQGL {
+    position: absolute;
+    top: 45%;
+    right: 20px;
+    line-height: 40px;
+    padding-left: 10px;
+    width: 20%;
+    height: 25%;
+    background-color: rgba(255, 248, 248, 0);
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.rightBottom {
+    position: absolute;
+    top: 70%;
+    right: 20px;
+    padding-left: 10px;
+    line-height: 40px;
+    width: 20%;
+    height: 25%;
+    background-color: rgba(255, 248, 248, 0);
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.leftMain {
+    position: absolute;
+    top: 25%;
+    left: 20px;
+    padding-left: 10px;
+    width: 20%;
+    height: 22%;
+    line-height: 40px;
+    background-color: rgba(255, 248, 248, 0);
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.leftMainContent {
+    display: flex; /* 启用Flexbox布局以并排显示子元素 */
+    justify-content: space-around; /* 或者使用其他值来控制子元素之间的间距，如space-between, flex-start等 */
+}
+
+.leftMainContent div {
+    text-align: left; /* 如果需要，可以居中文本 */
+}
+
+.cameraInfo {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: relative;
+    right: 70px;
+}
+
+.info1 {
+    grid-area: 1 / 1 / 2 / 6;
+    color: white;
+    height: 20px;
+    font-size: 10px;
+    line-height: 20px;
+    width: 100px;
+}
+
+.info2 {
+    grid-area: 2 / 1 / 3 / 6;
+    color: white;
+    height: 20px;
+    font-size: 10px;
+    line-height: 20px;
+    width: 100px
+}
+
+.info3 {
+    grid-area: 3 / 1 / 4 / 6;
+    color: white;
+    height: 20px;
+    font-size: 10px;
+    line-height: 20px;
+    width: 32%;
+    background-color: #84c1e0;
+    padding-left: 10px;
+}
+
+.info4 {
+    grid-area: 4 / 1 / 5 / 6;
+    color: white;
+    height: 20px;
+    font-size: 10px;
+    line-height: 20px;
+    width: 110px
+}
+
+.info5 {
+    grid-area: 5 / 1 / 6 / 6;
+    color: white;
+    height: 20px;
+    font-size: 10px;
+    line-height: 20px;
+    width: 53%;
+    background-color: #84c1e0;
+    padding-left: 10px;
+}
+
+.rightMain {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding-left: 10px;
+    width: 20%;
+    height: 85%;
+    line-height: 40px;
+    background-color: rgba(255, 248, 248, 0);
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.cameraList {
+    display: flex;
+    flex-direction: column; /* 让子元素垂直排列 */
+}
+
+.row {
+    display: flex; /* 使子元素（图片）在同一行显示 */
+    justify-content: space-between; /* 根据需要调整图片之间的间距 */
+}
+
+.video-container {
+    position: relative;
+    width: 45%; /* 或者你想要的任何宽度 */
+    padding-top: 40.25%; /* 16:9的长宽比，计算为 9/16 = 0.5625，然后转换为百分比 */
+    /*overflow: hidden;*/
+    margin-bottom: 20px;
+    float: left;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 根据需要，你可以使用`contain`来保持宽高比，但可能会留有空白 */
+}
+
+.cameraName {
+    position: absolute; /* 绝对定位在视频下方 */
+    bottom: -35px; /* 紧贴视频底部 */
+    left: 0; /* 紧贴容器左侧 */
+    width: 100%; /* 宽度与容器相同 */
+    color: white; /* 文本颜色 */
+    padding: 5px; /* 内边距 */
+    text-align: center; /* 文本居中 */
+    font-size: 10px;
+}
+
+.energyData {
+    position: relative;
+    width: 45%; /* 或者你想要的任何宽度 */
+    margin-bottom: 20px;
+    float: left;
+}
+
+.align-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+    align-items: flex-start; /* 水平左对齐 */
+    float: left;
+    color: white;
+    font-size: 8px;
+    /* 如果需要，可以添加额外的宽度或内边距 */
+    padding-right: 0px; /* 如果需要与其他元素间隔 */
+    position: absolute;
+
+}
+
+.label {
+    /* 如果需要，可以添加更多样式 */
+    margin-bottom: -10px;
+}
+
+.computerName {
+    background-color: rgb(32, 40, 86);
+    width: 45px;
+    text-align: center;
+    height: 15px;
+    line-height: 15px
+}
+
+.comData {
+    display: flex; /* 启用Flexbox */
+    align-items: flex-start; /* 垂直对齐方式改为从顶部开始 */
+    gap: 10px; /* 在子元素之间添加间距 */
+    margin-right: 45px;
+}
+
+.imageContainer, .textContainer {
+    display: flex; /* 对于.imageContainer，这里实际上可能不需要Flexbox，但为了保持一致性可以保留 */
+    flex-direction: column; /* 改为列方向排列 */
+    align-items: flex-start; /* 文本也从左侧开始（这实际上是默认行为，但明确写出来更好） */
+}
+
+.textContainer .textContent {
+    /* 你可以在这里添加样式来美化文本，如字体大小、颜色等 */
+    margin-bottom: 5px; /* 如果有需要，可以在文本之间添加一些间距 */
+}
+
+.imageContainer img {
+    /* 宽度、高度等样式，如果需要的话 */
+    float: left;
+    width: 40px;
+    height: auto;
+}
+
+.mySelect {
+    width: 200px;
+    border: 2px solid rgb(63, 81, 180);
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明背景 */
+}
+
+#chart-voltage {
+    transform: scale(0.6);
+    transform-origin: top left;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: -44px;
+}
+
+.energyLabel {
+    display: flex; /* 启用Flexbox布局以并排显示子元素 */
+    justify-content: space-around; /* 或者使用其他值来控制子元素之间的间距，如space-between, flex-start等 */
+}
+
+.energyLabel div {
+    text-align: left; /* 如果需要，可以居中文本 */
+}
+
+.labelApp {
+    position: relative;
+    width: 30px;
+    height: 12px;
+    border: 1px solid rgb(76, 129, 221);
+}
+
+
+#chart-energyAnalysis {
+    transform: scale(0.8);
+    transform-origin: top left;
+    overflow: hidden;
+    position: absolute;
+    top: 87px;
+    left: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    font-size: 10px;
+}
+
+tr {
+    height: 8px;
+    line-height: 8px;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: radial-gradient(circle at center, transparent, rgba(37,199,255,0.5));
+    /* 如果想要深蓝色，可以修改为 #add8e6 或其他颜色代码 */
+}
+
+th {
+    color: rgb(42,185,244);
+    font-size: 10px;
+}

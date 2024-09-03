@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+
+    <body>
+        <div id="menu">
+            <div class="parallelogram active" style="transform: skewX(30deg);" onclick="toggleStyles(this)">
+                <div class="inner-content" style="transform: skewX(-30deg);">社区管理</div>
+            </div>
+            <div class="parallelogram" style="transform: skewX(20deg);" onclick="toggleStyles(this)">
+                <div class="inner-content" style="transform: skewX(-20deg);">安保监控</div>
+            </div>
+            <div class="parallelogram" style="transform: scale(1.2); border-radius: 5%" onclick="toggleStyles(this)">
+                <div class="inner-content">CIM平台</div>
+            </div>
+            <div class="parallelogram" style="transform: skewX(-20deg);" onclick="toggleStyles(this)">
+                <div class="inner-content" style="transform: skewX(20deg);">能源检测</div>
+            </div>
+            <div class="parallelogram" style="transform: skewX(-30deg);" onclick="toggleStyles(this)">
+                <div class="inner-content" style="transform: skewX(30deg);">节能分析</div>
+            </div>
+        </div>
+
+        <div id="shequguanli" style="display: block">
+            <div class="left">
+                <div class="leftTop">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">安防概况</div>
+                    </div>
+                    <div class="leftTopMain">
+                        <div>
+                            <img src="./png/img/title.png" alt="">
+                            <div class="textBorder">业主人数</div>
+                            <div class="textContent">2318</div>
+                        </div>
+                        <div>
+                            <div class="text" style="font-size: 11px; margin-top: -10px">当前社区总人数</div>
+                            <div class="textContent" style="font-size: 20px; margin-top: -19px">12530</div>
+                            <div class="textBorder">访客人数</div>
+                            <div class="textContent">880</div>
+                        </div>
+                        <div>
+                            <div class="textContent" style="margin-top: -10px">黑名单</div>
+                            <div class="textContent" style="margin-top: -19px">12530</div>
+                            <div class="textBorder">外来人数</div>
+                            <div class="textContent">174</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="leftBottom">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">报警讯息列表</div>
+                    </div>
+                    <div id="leftBottomMain">
+                        <div class="leftBottomMainItem">
+                            <div class="rectangle"></div>
+                            <div class="monitoringName">监控1：大西门云台
+                                <div class="monitoringInfo" style="background-color: rgb(103,58,183);">待派追</div>
+                            </div>
+                            <div class="monitoringTime">07：12：18</div>
+                        </div>
+                        <div class="leftBottomMainItem">
+                            <div class="rectangle"></div>
+                            <div class="monitoringName">监控2：A楼南侧
+                                <div class="monitoringInfo" style="background-color: rgb(64,158,255);">处理中</div>
+                            </div>
+                            <div class="monitoringTime">07：13：12</div>
+                        </div>
+                        <div class="leftBottomMainItem">
+                            <div class="rectangle"></div>
+                            <div class="monitoringName">监控3：T9北侧
+                                <div class="monitoringInfo" style="background-color: rgb(63,81,181);">已消警</div>
+                            </div>
+                            <div class="monitoringTime">07：12：18</div>
+                        </div>
+                        <div class="leftBottomMainItem">
+                            <div class="rectangle"></div>
+                            <div class="monitoringName">监控4：大西门云台
+                                <div class="monitoringInfo" style="background-color: rgb(103,58,183);">待派追</div>
+                            </div>
+                            <div class="monitoringTime">07：12：18</div>
+                        </div>
+                        <div class="leftBottomMainItem">
+                            <div class="rectangle"></div>
+                            <div class="monitoringName">监控5：A楼南侧
+                                <div class="monitoringInfo" style="background-color: rgb(64,158,255);">处理中</div>
+                            </div>
+                            <div class="monitoringTime">07：12：18</div>
+                        </div>
+                        <div class="leftBottomMainItem">
+                            <div class="rectangle"></div>
+                            <div class="monitoringName">监控6：T9北侧
+                                <div class="monitoringInfo" style="background-color: rgb(63,81,181);">已消警</div>
+                            </div>
+                            <div class="monitoringTime">07：12：18</div>
+                        </div>
+                        <div class="leftBottomMainItem">
+                            <div class="rectangle"></div>
+                            <div class="monitoringName">监控7：大西门云台
+                                <div class="monitoringInfo" style="background-color: rgb(103,58,183);">待派追</div>
+                            </div>
+                            <div class="monitoringTime">07：12：18</div>
+                        </div>
+                        <div class="leftBottomMainItem">
+                            <div class="rectangle"></div>
+                            <div class="monitoringName">监控8：A楼南侧
+                                <div class="monitoringInfo" style="background-color: rgb(64,158,255);">处理中</div>
+                            </div>
+                            <div class="monitoringTime">07：12：18</div>
+                        </div>
+                        <div class="leftBottomMainItem">
+                            <div class="rectangle"></div>
+                            <div class="monitoringName">监控9：T9北侧
+                                <div class="monitoringInfo" style="background-color: rgb(63,81,181);">已消警</div>
+                            </div>
+                            <div class="monitoringTime">07：12：18</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="rightTop">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">黑名单数据</div>
+                    </div>
+                    <div class="rightTopMain">
+                        <div>
+                            <img src="./png/img/user.png" alt="">
+                        </div>
+                        <div style="color: white; background-color: black; height: 20px; font-size: 10px; line-height: 20px;margin-top: 15px">
+                            近一月出现黑名单次数
+                        </div>
+                        <div style="color: rgb(37,199,255); font-size: 35px; margin-top: -10px">
+                            754
+                        </div>
+                    </div>
+                </div>
+                <div class="rightMedium">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">超时访客数据</div>
+                    </div>
+                    <div id="chart-panel" style="height: 130%;width: 100%; margin-top: -50px"></div>
+                </div>
+                <div class="rightMainSQGL">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">业主关怀</div>
+                    </div>
+                    <div id="chart-pake" style="height: 100%;width: 100%; margin-top: -50px;"></div>
+                    <img src="./png/img/user.png" alt=""
+                         style="width: 50px;height: auto; position: absolute; top: 65px;left: 65px">
+                </div>
+                <div class="rightBottom">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">报警数据</div>
+                    </div>
+                    <div id="chart-call" style="height: 100%;width: 100%; margin-top: -50px"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="anbaojiankong" style="display: none">
+            <div class="left">
+                <div class="leftTop">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">摄像头概述总览</div>
+                    </div>
+                    <div class="leftTopMain">
+                        <div>
+                            <img src="./png/img/title.png" alt="">
+                            <div class="textBorder">人脸识别摄像头</div>
+                            <div class="textContent">8</div>
+                        </div>
+                        <div>
+                            <div class="text" style="font-size: 11px; margin-top: -10px">摄像头总数量</div>
+                            <div class="textContent" style="font-size: 20px; margin-top: -19px">53</div>
+                            <div class="textBorder">可控制摄像头</div>
+                            <div class="textContent">20</div>
+                        </div>
+                        <div style="margin-top: 51px">
+                            <div class="textBorder">故障摄像头</div>
+                            <div class="textContent">2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="leftMain">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">摄像头覆盖占比</div>
+                    </div>
+                    <div class="leftMainContent">
+                        <div id="chart-yibiaopan" style="height: 100%;width: 100%;margin-left: -50px"></div>
+                        <div class="cameraInfo">
+                            <div class="info1">覆盖区域显示</div>
+                            <div class="info2" style="">人脸识别区域：32%</div>
+                            <div class="info3">32%</div>
+                            <div class="info4">可控摄像头区域：53%</div>
+                            <div class="info5">53%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="leftBottom" style="top: 50%; height: 40%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">报警讯息列表</div>
+                    </div>
+                    <div class="leftBottomMainItem">
+                        <div class="rectangle"></div>
+                        <div class="monitoringName">监控1：大西门云台
+                            <div class="monitoringInfo" style="background-color: rgb(103,58,183);">待派追</div>
+                        </div>
+                        <div class="monitoringTime">07：12：18</div>
+                    </div>
+                    <div class="leftBottomMainItem">
+                        <div class="rectangle"></div>
+                        <div class="monitoringName">监控2：A楼南侧
+                            <div class="monitoringInfo" style="background-color: rgb(64,158,255);">处理中</div>
+                        </div>
+                        <div class="monitoringTime">07：13：12</div>
+                    </div>
+                    <div class="leftBottomMainItem">
+                        <div class="rectangle"></div>
+                        <div class="monitoringName">监控3：T9北侧
+                            <div class="monitoringInfo" style="background-color: rgb(63,81,181);">已消警</div>
+                        </div>
+                        <div class="monitoringTime">07：12：18</div>
+                    </div>
+                    <div class="leftBottomMainItem">
+                        <div class="rectangle"></div>
+                        <div class="monitoringName">监控4：大西门云台
+                            <div class="monitoringInfo" style="background-color: rgb(103,58,183);">待派追</div>
+                        </div>
+                        <div class="monitoringTime">07：12：18</div>
+                    </div>
+                    <div class="leftBottomMainItem">
+                        <div class="rectangle"></div>
+                        <div class="monitoringName">监控5：A楼南侧
+                            <div class="monitoringInfo" style="background-color: rgb(64,158,255);">处理中</div>
+                        </div>
+                        <div class="monitoringTime">07：12：18</div>
+                    </div>
+                    <div class="leftBottomMainItem">
+                        <div class="rectangle"></div>
+                        <div class="monitoringName">监控6：T9北侧
+                            <div class="monitoringInfo" style="background-color: rgb(63,81,181);">已消警</div>
+                        </div>
+                        <div class="monitoringTime">07：12：18</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightMain">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">摄像头视频监控</div>
+                    </div>
+                    <div class="cameraList">
+                        <div class="row">
+                            <div class="video-container">
+                                <video src="./png/img/videoDemo.mp4" controls></video>
+                                <div class="cameraName">星关广场云台</div>
+                            </div>
+                            <div class="video-container">
+                                <video src="./png/img/videoDemo.mp4" controls></video>
+                                <div class="cameraName">底商北侧</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="video-container">
+                                <video src="./png/img/videoDemo.mp4" controls></video>
+                                <div class="cameraName">后山艺术空间</div>
+                            </div>
+                            <div class="video-container">
+                                <video src="./png/img/videoDemo.mp4" controls></video>
+                                <div class="cameraName">T9后面</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="video-container">
+                                <video src="./png/img/videoDemo.mp4" controls></video>
+                                <div class="cameraName">门口</div>
+                            </div>
+                            <div class="video-container">
+                                <video src="./png/img/videoDemo.mp4" controls></video>
+                                <div class="cameraName">T9北侧</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="video-container">
+                                <video src="./png/img/videoDemo.mp4" controls></video>
+                                <div class="cameraName">T9北侧</div>
+                            </div>
+                            <div class="video-container">
+                                <video src="./png/img/videoDemo.mp4" controls></video>
+                                <div class="cameraName">T9北侧</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="CIM" style="display: none">
+            <div class="left">
+                <div class="leftTop">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">安防概况</div>
+                    </div>
+                    <div class="leftTopMain">
+                        <div>
+                            <img src="./png/img/title.png" alt="">
+                            <div class="textBorder">业主人数</div>
+                            <div class="textContent">2318</div>
+                        </div>
+                        <div>
+                            <div class="text" style="font-size: 11px; margin-top: -10px">当前社区总人数</div>
+                            <div class="textContent" style="font-size: 20px; margin-top: -19px">12530</div>
+                            <div class="textBorder">访客人数</div>
+                            <div class="textContent">880</div>
+                        </div>
+                        <div style="margin-top: 51px">
+                            <div class="textBorder">外来人数</div>
+                            <div class="textContent">174</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="leftMain">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">摄像头视频监控</div>
+                    </div>
+                    <div class="cameraList">
+                        <div class="row">
+                            <div class="video-container" style="width: 30%;padding-top: 23.25%">
+                                <video src="./png/img/videoDemo.mp4" controls></video>
+                                <div class="cameraName">星关广场云台</div>
+                            </div>
+                            <div class="video-container" style="width: 30%;padding-top: 23.25%">
+                                <video src="./png/img/videoDemo.mp4" controls></video>
+                                <div class="cameraName">星关广场云台</div>
+                            </div>
+                            <div class="video-container" style="width: 30%;padding-top: 23.25%">
+                                <video src="./png/img/videoDemo.mp4" controls></video>
+                                <div class="cameraName">星关广场云台</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="leftBottom" style="top: 44%; height: 40%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">报警讯息列表</div>
+                    </div>
+                    <div class="leftBottomMainItem">
+                        <div class="rectangle"></div>
+                        <div class="monitoringName">监控1：大西门云台
+                            <div class="monitoringInfo" style="background-color: rgb(103,58,183);">待派追</div>
+                        </div>
+                        <div class="monitoringTime">07：12：18</div>
+                    </div>
+                    <div class="leftBottomMainItem">
+                        <div class="rectangle"></div>
+                        <div class="monitoringName">监控2：A楼南侧
+                            <div class="monitoringInfo" style="background-color: rgb(64,158,255);">处理中</div>
+                        </div>
+                        <div class="monitoringTime">07：13：12</div>
+                    </div>
+                    <div class="leftBottomMainItem">
+                        <div class="rectangle"></div>
+                        <div class="monitoringName">监控3：T9北侧
+                            <div class="monitoringInfo" style="background-color: rgb(63,81,181);">已消警</div>
+                        </div>
+                        <div class="monitoringTime">07：12：18</div>
+                    </div>
+                    <div class="leftBottomMainItem">
+                        <div class="rectangle"></div>
+                        <div class="monitoringName">监控4：大西门云台
+                            <div class="monitoringInfo" style="background-color: rgb(103,58,183);">待派追</div>
+                        </div>
+                        <div class="monitoringTime">07：12：18</div>
+                    </div>
+                    <div class="leftBottomMainItem">
+                        <div class="rectangle"></div>
+                        <div class="monitoringName">监控5：A楼南侧
+                            <div class="monitoringInfo" style="background-color: rgb(64,158,255);">处理中</div>
+                        </div>
+                        <div class="monitoringTime">07：12：18</div>
+                    </div>
+                    <div class="leftBottomMainItem">
+                        <div class="rectangle"></div>
+                        <div class="monitoringName">监控6：T9北侧
+                            <div class="monitoringInfo" style="background-color: rgb(63,81,181);">已消警</div>
+                        </div>
+                        <div class="monitoringTime">07：12：18</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightTop" style="height: 22%;">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">舒适度数据统计</div>
+                    </div>
+                    <div class="leftMainContent">
+                        <div id="chart-yibiaopan1" style="height: 100%;width: 100%;margin-left: -50px"></div>
+                        <div class="cameraInfo" style="top: -18px">
+                            <div class="info2" style="">室内空气：32%</div>
+                            <div class="info3">32%</div>
+                            <div class="info4">室内温度：53%</div>
+                            <div class="info5">53%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightMedium" style="top: 25%; height: 26%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">能源数据概况</div>
+                    </div>
+                    <div class="cameraList">
+                        <div class="row" style="height: 20px">
+                            <div class="energyData">
+                                <div class="cameraName">本月总能耗（单位：kW.h）</div>
+                                <div style="color: rgb(37,199,255); font-size: 25px; margin-top: 10px;padding-left: 30px">
+                                    11787
+                                </div>
+                            </div>
+                            <div class="energyData">
+                                <div class="cameraName">本年总能耗（单位：kW.h）</div>
+                                <div style="color: rgb(37,199,255); font-size: 25px; margin-top: 10px;padding-left: 30px">
+                                    210688
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="height: 45px">
+                            <div class="energyData">
+                                <div class="cameraName">本日总负荷（单位：kW.h）</div>
+                                <div style="color: rgb(37,199,255); font-size: 25px; margin-top: 35px;padding-left: 30px">
+                                    73779
+                                </div>
+                            </div>
+                            <div class="energyData">
+                                <div class="cameraName">本年平均能耗（单位：kW.h）</div>
+                                <div style="color: rgb(37,199,255); font-size: 25px; margin-top: 35px;padding-left: 30px">
+                                    10127
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="height: 45px">
+                            <div class="energyData">
+                                <div class="cameraName">本日总电费（单位：元）</div>
+                                <div style="color: rgb(37,199,255); font-size: 25px; margin-top: 35px;padding-left: 30px">
+                                    5646
+                                </div>
+                            </div>
+                            <div class="energyData">
+                                <div class="cameraName">本年总电费（单位：元）</div>
+                                <div style="color: rgb(37,199,255); font-size: 25px; margin-top: 35px;padding-left: 30px">
+                                    203231
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightMainSQGL" style="top: 51%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">业主关怀</div>
+                    </div>
+                    <div id="chart-call1" style="height: 100%;width: 100%;margin-top: -50px"></div>
+                </div>
+                <div class="rightBottom" style="top: 73%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">机主运行情况</div>
+                    </div>
+                    <div class="align-vertical" style="left: 31px; top: 51px;">
+                        <div class="label">蒸发器</div>
+                        <div class="label">冷凝器</div>
+                    </div>
+                    <div id="chart-tempe" style="height: 100%;width: 100%;margin-top: -50px"></div>
+                    <div class='align-vertical' style="float: right;right: 10px;top: 51px">
+                        <div class="computerName">1#冷站</div>
+                        <div class="computerName">(1#主机)</div>
+                        <div style="height: 10px;line-height: 10px; text-align: center;margin-left: 5px">开启状态</div>
+                        <div class="monitoringInfo" style="background-color: rgb(0,214,184);">启动</div>
+                        <div style="height: 10px;line-height: 10px;text-align: center;margin-left: 5px">运行状态</div>
+                        <div class="monitoringInfo" style="background-color: rgb(0,214,184);">运行</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="nengyuanjiance" style="display:none;">
+            <div class="left">
+                <div class="leftTop" style="height: 22%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">4#天棚热泵主机</div>
+                    </div>
+                    <div class="leftTopMain">
+                        <div class="cameraList">
+                            <div class="row">
+                                <div class="comData">
+                                    <div class="imageContainer">
+                                        <img src="./png/img/gl.png" alt="功率图标">
+                                    </div>
+                                    <div class="textContainer" style="margin-top: -8px">
+                                        <div class="textContent">功率</div>
+                                        <div style="color: white; font-size: 20px; margin-top: -20px">211.8</div>
+                                    </div>
+                                </div>
+                                <div class="comData">
+                                    <div class="imageContainer">
+                                        <img src="./png/img/dl.png" alt="电量图标">
+                                    </div>
+                                    <div class="textContainer" style="margin-top: -8px">
+                                        <div class="textContent">电量</div>
+                                        <div style="color: white; font-size: 20px; margin-top: -20px">272322.8</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px">机组运行工况</div>
+                                    <div class="monitoringInfo" style="background-color: rgb(225,159,64);">制热</div>
+                                </div>
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px">机组运行状态</div>
+                                    <div class="monitoringInfo" style="background-color: rgb(0,213,184);">运行</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px">C1启动状态</div>
+                                    <div class="monitoringInfo"
+                                         style="background-color: rgb(0,213,184); margin-left: 10px">启动
+                                    </div>
+                                </div>
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px; margin-right: 10px">
+                                        C2启动状态
+                                    </div>
+                                    <div class="monitoringInfo" style="background-color: rgb(0,213,184);">启动</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="leftTop" style="height: 22%; top: 22%;">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">4#天棚热泵主机</div>
+                    </div>
+                    <div class="leftTopMain">
+                        <div class="cameraList">
+                            <div class="row">
+                                <div class="comData">
+                                    <div class="imageContainer">
+                                        <img src="./png/img/gl.png" alt="功率图标">
+                                    </div>
+                                    <div class="textContainer" style="margin-top: -8px">
+                                        <div class="textContent">功率</div>
+                                        <div style="color: white; font-size: 20px; margin-top: -20px">211.8</div>
+                                    </div>
+                                </div>
+                                <div class="comData">
+                                    <div class="imageContainer">
+                                        <img src="./png/img/dl.png" alt="电量图标">
+                                    </div>
+                                    <div class="textContainer" style="margin-top: -8px">
+                                        <div class="textContent">电量</div>
+                                        <div style="color: white; font-size: 20px; margin-top: -20px">272322.8</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px">机组运行工况</div>
+                                    <div class="monitoringInfo" style="background-color: rgb(225,159,64);">制热</div>
+                                </div>
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px">机组运行状态</div>
+                                    <div class="monitoringInfo" style="background-color: rgb(0,213,184);">运行</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px">C1启动状态</div>
+                                    <div class="monitoringInfo"
+                                         style="background-color: rgb(0,213,184); margin-left: 10px">启动
+                                    </div>
+                                </div>
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px; margin-right: 10px">
+                                        C2启动状态
+                                    </div>
+                                    <div class="monitoringInfo" style="background-color: rgb(0,213,184);">启动</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="leftTop" style="height: 22%;top: 44%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">4#天棚热泵主机</div>
+                    </div>
+                    <div class="leftTopMain">
+                        <div class="cameraList">
+                            <div class="row">
+                                <div class="comData">
+                                    <div class="imageContainer">
+                                        <img src="./png/img/gl.png" alt="功率图标">
+                                    </div>
+                                    <div class="textContainer" style="margin-top: -8px">
+                                        <div class="textContent">功率</div>
+                                        <div style="color: white; font-size: 20px; margin-top: -20px">211.8</div>
+                                    </div>
+                                </div>
+                                <div class="comData">
+                                    <div class="imageContainer">
+                                        <img src="./png/img/dl.png" alt="电量图标">
+                                    </div>
+                                    <div class="textContainer" style="margin-top: -8px">
+                                        <div class="textContent">电量</div>
+                                        <div style="color: white; font-size: 20px; margin-top: -20px">272322.8</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px">机组运行工况</div>
+                                    <div class="monitoringInfo" style="background-color: rgb(225,159,64);">制热</div>
+                                </div>
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px">机组运行状态</div>
+                                    <div class="monitoringInfo" style="background-color: rgb(0,213,184);">运行</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px">C1启动状态</div>
+                                    <div class="monitoringInfo"
+                                         style="background-color: rgb(0,213,184); margin-left: 10px">启动
+                                    </div>
+                                </div>
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px; margin-right: 10px">
+                                        C2启动状态
+                                    </div>
+                                    <div class="monitoringInfo" style="background-color: rgb(0,213,184);">启动</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="leftTop" style="height: 22%; top: 66%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">4#天棚热泵主机</div>
+                    </div>
+                    <div class="leftTopMain">
+                        <div class="cameraList">
+                            <div class="row">
+                                <div class="comData">
+                                    <div class="imageContainer">
+                                        <img src="./png/img/gl.png" alt="功率图标">
+                                    </div>
+                                    <div class="textContainer" style="margin-top: -8px">
+                                        <div class="textContent">功率</div>
+                                        <div style="color: white; font-size: 20px; margin-top: -20px">211.8</div>
+                                    </div>
+                                </div>
+                                <div class="comData">
+                                    <div class="imageContainer">
+                                        <img src="./png/img/dl.png" alt="电量图标">
+                                    </div>
+                                    <div class="textContainer" style="margin-top: -8px">
+                                        <div class="textContent">电量</div>
+                                        <div style="color: white; font-size: 20px; margin-top: -20px">272322.8</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px">机组运行工况</div>
+                                    <div class="monitoringInfo" style="background-color: rgb(225,159,64);">制热</div>
+                                </div>
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px">机组运行状态</div>
+                                    <div class="monitoringInfo" style="background-color: rgb(0,213,184);">运行</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px">C1启动状态</div>
+                                    <div class="monitoringInfo"
+                                         style="background-color: rgb(0,213,184); margin-left: 10px">启动
+                                    </div>
+                                </div>
+                                <div class="comData" style="margin-right: 10px">
+                                    <div style="color: white;font-size: 12px; margin-top: -10px; margin-right: 10px">
+                                        C2启动状态
+                                    </div>
+                                    <div class="monitoringInfo" style="background-color: rgb(0,213,184);">启动</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightTop" style="height: 5%">
+                    <select class="mySelect" style="width: 300px;border: 2px solid rgb(63, 81, 180);background-color: rgba(255, 255, 255, 0);height: 20px;border-radius: 5px; color: rgba(255,255,255,0.5);position: absolute;top: 8px">
+                        <option>请选择</option>
+                        <option>1</option>
+                        <option>1</option>
+                    </select>
+                </div>
+                <div class="rightMedium" style="top: 8%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">三相电压</div>
+                    </div>
+                    <div id="chart-voltage" style="height: 200%;width: 200%"></div>
+                </div>
+                <div class="rightMainSQGL" style="top: 33%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">三相电流</div>
+                    </div>
+                    <div id="chart-call2" style="height: 100%;width: 100%; margin-top: -50px"></div>
+                </div>
+                <div class="rightBottom" style="top: 56%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">超时访客数据</div>
+                    </div>
+                    <div id="chart-panel1" style="height: 130%;width: 100%; margin-top: -50px"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="jienengfenxi" style="display: none">
+            <div class="left">
+                <div class="leftTop" style="height: 22%;">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">当代能效标识</div>
+                    </div>
+                    <div class="energyLabel">
+                        <div style="color: white; font-size: 10px;position: relative;top: -13px;">低</div>
+                        <div class="labelApp"></div>
+                        <div class="labelApp"></div>
+                        <div class="labelApp"></div>
+                        <div class="labelApp"></div>
+                        <div class="labelApp"></div>
+                        <div style="color: white; font-size: 10px;position: relative;top: -13px;">高</div>
+                        <div class="monitoringInfo" style="background-color: rgb(8,180,242); text-align: center; top: -10px; position: relative; top: -4px">一级</div>
+                    </div>
+                    <div class="leftMainContent" style="position: relative;top: -23px;">
+                        <div id="chart-yibiaopan2" style="height: 100%;width: 100%;margin-left: -50px"></div>
+                        <div class="cameraInfo" style="position: relative;top: -16px">
+                            <div class="info2" style="">总负荷：32kW</div>
+                            <div class="info3">32%</div>
+                            <div class="info4">总能耗：53%</div>
+                            <div class="info5">53%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="leftTop" style="top: 25%; height: 26%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">系统费用统计</div>
+                    </div>
+                    <div id="chart-panel2" style="height: 130%;width: 100%; margin-top: -50px"></div>
+                </div>
+                <div class="leftTop" style="top: 51%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">各类型费用占比</div>
+                    </div>
+                    <div id="chart-pake1" style="height: 100%;width: 100%; margin-top: -34px;"></div>
+                    <img src="./png/img/user.png" alt=""
+                         style="width: 34px;height: auto; position: absolute; top: 71px;left: 73px">
+                </div>
+                <div class="leftTop" style="top: 73%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">能源分析</div>
+                    </div>
+                    <div id="chart-energyAnalysis" style="height: 100%;width: 100%;margin-top: -50px"></div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightTop" style="top: 20px; height: 26%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">能源数据概况</div>
+                    </div>
+                    <div class="cameraList">
+                        <div class="row" style="height: 20px">
+                            <div class="energyData">
+                                <div class="cameraName">本月总能耗（单位：kW.h）</div>
+                                <div style="color: rgb(37,199,255); font-size: 25px; margin-top: 10px;padding-left: 30px">
+                                    11787
+                                </div>
+                            </div>
+                            <div class="energyData">
+                                <div class="cameraName">本年总能耗（单位：kW.h）</div>
+                                <div style="color: rgb(37,199,255); font-size: 25px; margin-top: 10px;padding-left: 30px">
+                                    210688
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="height: 45px">
+                            <div class="energyData">
+                                <div class="cameraName">本日总负荷（单位：kW.h）</div>
+                                <div style="color: rgb(37,199,255); font-size: 25px; margin-top: 35px;padding-left: 30px">
+                                    73779
+                                </div>
+                            </div>
+                            <div class="energyData">
+                                <div class="cameraName">本年平均能耗（单位：kW.h）</div>
+                                <div style="color: rgb(37,199,255); font-size: 25px; margin-top: 35px;padding-left: 30px">
+                                    10127
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="height: 45px">
+                            <div class="energyData">
+                                <div class="cameraName">本日总电费（单位：元）</div>
+                                <div style="color: rgb(37,199,255); font-size: 25px; margin-top: 35px;padding-left: 30px">
+                                    5646
+                                </div>
+                            </div>
+                            <div class="energyData">
+                                <div class="cameraName">本年总电费（单位：元）</div>
+                                <div style="color: rgb(37,199,255); font-size: 25px; margin-top: 35px;padding-left: 30px">
+                                    203231
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightMainSQGL" style="top: 29%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">系统能效统计</div>
+                    </div>
+                    <div id="chart-call3" style="height: 100%;width: 100%; margin-top: -50px"></div>
+                </div>
+                <div class="rightBottom" style="top: 52%">
+                    <div class="title">
+                        <img src="./png/img/titleImg.png" alt="">
+                        <div class="text">运行相关数据</div>
+                    </div>
+                    <div>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>名称</th>
+                                <th>总电量</th>
+                                <th>总电费</th>
+                                <th>总负荷</th>
+                                <th>平均能耗</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>天棚主机</td>
+                                <td>10462.7</td>
+                                <td>5620.3</td>
+                                <td>1.8</td>
+                                <td>2.3</td>
+                            </tr>
+                            <tr>
+                                <td>天棚主机</td>
+                                <td>10462.7</td>
+                                <td>5620.3</td>
+                                <td>1.8</td>
+                                <td>2.3</td>
+                            </tr>
+                            <tr>
+                                <td>天棚主机</td>
+                                <td>10462.7</td>
+                                <td>5620.3</td>
+                                <td>1.8</td>
+                                <td>2.3</td>
+                            </tr>
+                            <tr>
+                                <td>天棚主机</td>
+                                <td>10462.7</td>
+                                <td>5620.3</td>
+                                <td>1.8</td>
+                                <td>2.3</td>
+                            </tr>
+                            <tr>
+                                <td>天棚主机</td>
+                                <td>10462.7</td>
+                                <td>5620.3</td>
+                                <td>1.8</td>
+                                <td>2.3</td>
+                            </tr>
+                            <tr>
+                                <td>天棚主机</td>
+                                <td>10462.7</td>
+                                <td>5620.3</td>
+                                <td>1.8</td>
+                                <td>2.3</td>
+                            </tr>
+                            <tr>
+                                <td>天棚主机</td>
+                                <td>10462.7</td>
+                                <td>5620.3</td>
+                                <td>1.8</td>
+                                <td>2.3</td>
+                            </tr>
+                            <tr>
+                                <td>天棚主机</td>
+                                <td>10462.7</td>
+                                <td>5620.3</td>
+                                <td>1.8</td>
+                                <td>2.3</td>
+                            </tr>
+                            <tr>
+                                <td>天棚主机</td>
+                                <td>10462.7</td>
+                                <td>5620.3</td>
+                                <td>1.8</td>
+                                <td>2.3</td>
+                            </tr>
+                            <tr>
+                                <td>天棚主机</td>
+                                <td>10462.7</td>
+                                <td>5620.3</td>
+                                <td>1.8</td>
+                                <td>2.3</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="./echarts.min.js"></script>
+        <script type="text/javascript" src="./jquery.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+
+    <script>
+        let currentActive = document.getElementsByClassName('parallelogram')[0]; // 用于追踪当前激活的元素
+        let shequguanli = $('#shequguanli');
+        let anbaojiankong = $('#anbaojiankong');
+        let CIM = $('#CIM');
+        let nengyuanjiance = $('#nengyuanjiance');
+        let jienengfenxi = $('#jienengfenxi');
+
+        var chartPanel = echarts.getInstanceByDom(document.getElementById('chart-panel'));
+        var chartPake = echarts.getInstanceByDom(document.getElementById('chart-pake'));
+        var chartCall = echarts.getInstanceByDom(document.getElementById('chart-call'));
+
+        var chartYibiaopan = echarts.getInstanceByDom(document.getElementById('chart-yibiaopan'));
+
+        var chartYibiaopan1 = echarts.getInstanceByDom(document.getElementById('chart-yibiaopan1'));
+        var chartCall1 = echarts.getInstanceByDom(document.getElementById('chart-call1'));
+        var chartTemp = echarts.getInstanceByDom(document.getElementById('chart-tempe'));
+
+        var chartVoltage = echarts.getInstanceByDom(document.getElementById('chart-voltage'));
+        var chartCall2 = echarts.getInstanceByDom(document.getElementById('chart-call2'));
+        var chartPanel1 = echarts.getInstanceByDom(document.getElementById('chart-panel1'));
+
+        var chartYibiaopan2 = echarts.getInstanceByDom(document.getElementById('chart-yibiaopan2'));
+        var chartPanel2 = echarts.getInstanceByDom(document.getElementById('chart-panel2'));
+        var chartPake1 = echarts.getInstanceByDom(document.getElementById('chart-pake1'));
+        var chartEnergyAnalysis = echarts.getInstanceByDom(document.getElementById('chart-energyAnalysis'));
+        var chartCall3 = echarts.getInstanceByDom(document.getElementById('chart-call3'));
+
+
+        function toggleStyles(element) {
+
+            switch (element.childNodes[1].innerText) {
+                case '社区管理':
+                    shequguanli[0].style.display = 'block';
+                    anbaojiankong[0].style.display = 'none';
+                    CIM[0].style.display = 'none';
+                    nengyuanjiance[0].style.display = 'none';
+                    jienengfenxi[0].style.display = 'none';
+                    chartPanel.resize();
+                    chartPake.resize();
+                    chartCall.resize();
+                    break;
+                case '安保监控':
+                    shequguanli[0].style.display = 'none';
+                    anbaojiankong[0].style.display = 'block';
+                    CIM[0].style.display = 'none';
+                    nengyuanjiance[0].style.display = 'none';
+                    jienengfenxi[0].style.display = 'none';
+                    chartYibiaopan.resize();
+                    break;
+                case 'CIM平台':
+                    shequguanli[0].style.display = 'none';
+                    anbaojiankong[0].style.display = 'none';
+                    CIM[0].style.display = 'block';
+                    nengyuanjiance[0].style.display = 'none';
+                    jienengfenxi[0].style.display = 'none';
+                    chartYibiaopan1.resize();
+                    chartCall1.resize();
+                    chartTemp.resize();
+                    break;
+                case '能源检测':
+                    shequguanli[0].style.display = 'none';
+                    anbaojiankong[0].style.display = 'none';
+                    CIM[0].style.display = 'none';
+                    nengyuanjiance[0].style.display = 'block';
+                    jienengfenxi[0].style.display = 'none';
+                    chartVoltage.resize();
+                    chartCall2.resize();
+                    chartPanel1.resize();
+                    break;
+                case '节能分析':
+                    shequguanli[0].style.display = 'none';
+                    anbaojiankong[0].style.display = 'none';
+                    CIM[0].style.display = 'none';
+                    nengyuanjiance[0].style.display = 'none';
+                    jienengfenxi[0].style.display = 'block';
+                    chartYibiaopan2.resize();
+                    chartPanel2.resize();
+                    chartPake1.resize();
+                    chartEnergyAnalysis.resize();
+                    chartCall3.resize();
+                    break;
+                default:
+                    console.log(222);
+            }
+            // 如果存在当前激活的元素，并且不是被点击的它元素，则移除其 active 类
+            if (currentActive && currentActive !== element) {
+                currentActive.classList.remove('active');
+            }
+
+            // 如果元素没有 active 类，则添加它
+            // 注意：这里不使用 classList.toggle，因为我们只想在元素没有 active 类时添加它
+            if (!element.classList.contains('active')) {
+                element.classList.add('active');
+            }
+
+            // 更新当前激活的元素（如果你需要的话）
+            currentActive = element;
+        }
+    </script>
+</html>
